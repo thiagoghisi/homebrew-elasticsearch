@@ -1,5 +1,3 @@
-require 'formula'
-
 class Elasticsearch < Formula
   homepage 'http://www.elasticsearch.org'
   url 'http://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.20.6.tar.gz'
