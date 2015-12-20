@@ -1,4 +1,4 @@
-class Elasticsearch < Formula
+class Elasticsearch020 < Formula
   homepage 'http://www.elasticsearch.org'
   url 'http://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.20.6.tar.gz'
   sha1 'f66a778ad94ea1dd69d18f8f89ce32c2383898eb'
@@ -72,7 +72,7 @@ class Elasticsearch < Formula
     EOS
   end
 
-  plist_options :manual => "elasticsearch -f -D es.config=#{HOMEBREW_PREFIX}/opt/elasticsearch/config/elasticsearch.yml"
+  plist_options :manual => "elasticsearch -f -D es.config=#{HOMEBREW_PREFIX}/opt/elasticsearch020/config/elasticsearch.yml"
 
   def plist; <<-EOS.undent
       <?xml version="1.0" encoding="UTF-8"?>
@@ -101,9 +101,9 @@ class Elasticsearch < Formula
           <key>WorkingDirectory</key>
           <string>#{var}</string>
           <key>StandardErrorPath</key>
-          <string>/dev/null</string>
+          <string>#{var}/log/elasticsearch020.log</string>
           <key>StandardOutPath</key>
-          <string>/dev/null</string>
+          <string>#{var}/log/elasticsearch020.log</string>
         </dict>
       </plist>
     EOS
